@@ -17,9 +17,9 @@ function App() {
     setMyRef(data)
   }
 
-  useEffect(() => {
-    window.blur()
-  }, [])
+  // useEffect(() => {
+  //   window.blur()
+  // }, [])
   return (
     <div className="App">
       <Navbar newRef={myRef} />
