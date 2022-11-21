@@ -1,0 +1,120 @@
+.details_container {
+    width: 50%;
+    margin: auto;
+    /* border: 1px solid red; */
+    margin-top: -20px;
+    padding-top: 8%;
+    text-align: center;
+
+}
+
+@media (max-width: 450px) {
+    .details_container {
+        width: 98%;
+        margin: auto;
+        /* border: 1px solid red; */
+        margin-top: -20px;
+        padding-top: 8%;
+        text-align: center;
+        padding-top: 60px;
+    }
+}
+
+@media (max-width: 850px) {
+    .details_container {
+        width: 95%;
+        margin: auto;
+        /* border: 1px solid red; */
+        margin-top: -20px;
+        padding-top: 8%;
+        text-align: center;
+        padding-top: 150px;
+    }
+}
+
+h3 {
+    font-size: 3.1rem;
+    letter-spacing: 0cm;
+    font-weight: 700;
+    letter-spacing: 0.1px;
+}
+
+@media (max-width :450px) {
+    h3 {
+        font-size: 2rem !important;
+        letter-spacing: 0cm;
+        font-weight: 600;
+        letter-spacing: 0.1px;
+    }
+}
+
+@media (max-width :850px) {
+    h3 {
+        font-size: 3rem;
+        letter-spacing: 0cm;
+        font-weight: 700;
+        letter-spacing: 0.1px;
+    }
+}
+
+h5 {
+    font-size: 1.62rem;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.1px;
+}
+
+.input-feedback {
+    font-size: 1rem;
+    color: #f40612;
+    text-align: left;
+    margin-left: 13%;
+}
+
+@media (max-width:850px) {
+    .input-feedback {
+        font-size: 1rem;
+        color: #f40612;
+        text-align: left;
+        margin-left: 13%;
+    }
+}
+
+@media (max-width:450px) {
+    .input-feedback {
+        font-size: 1rem;
+        color: #f40612;
+        text-align: left;
+        margin-left: 3%;
+    }
+}
+
+.text-input {
+    width: 55%;
+    height: 50px;
+    font-size: 16px;
+    padding: 1px 10px;
+}
+
+.submit_btn {
+    height: 57px;
+    background-color: rgb(205, 17, 17);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+
+}
+
+.submit_btn:hover {
+    background-color: #f40612;
+}
+
+.text_container {
+    width: 86%;
+    margin: auto;
+}
