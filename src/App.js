@@ -11,23 +11,20 @@ import {
   Route,
 }
   from "react-router-dom";
+import { Signup } from './component/Signup/Signup';
 function App() {
   const [myRef, setMyRef] = useState()
   const MyRef = (data) => {
     setMyRef(data)
   }
-
-  // useEffect(() => {
-  //   window.blur()
-  // }, [])
   return (
     <div className="App">
       <Navbar newRef={myRef} />
       <Router>
         <Routes>
           <Route path='/' element={<Home MyRef={MyRef} />} />
-          <Route path='/movies' element={!localStorage.getItem('email') ?
-            <h2 className='page_404' >Please login to enjoy movie content</h2> :
+          <Route path='/create-account' element={<Signup />} />
+          <Route path='/movies' element={
             <> <Banner />
               <Row title={"Netflix Original"} isLarge fetchURL={requests.fetchNetflixOriginal} />
               <Row title={"Trending Movies"} fetchURL={requests.fetchTrending} />
@@ -36,7 +33,8 @@ function App() {
               <Row title={"Comedy Movies"} fetchURL={requests.fetchComedyMovies} />
               <Row title={"Horror Movies"} fetchURL={requests.fetchHorrorMovies} />
               <Row title={"Romantic Movies"} fetchURL={requests.fetchRomanceMovies} />
-              <Row title={"Top Documentries"} fetchURL={requests.fetchDocumentries} /> </>}
+              <Row title={"Top Documentries"} fetchURL={requests.fetchDocumentries} />
+            </>}
           />
         </Routes>
       </Router>

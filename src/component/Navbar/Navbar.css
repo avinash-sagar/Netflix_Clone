@@ -6,7 +6,8 @@
     margin-left: 50px;
     margin-top: 10px;
 }
-@media (max-width:450px){
+
+@media (max-width:450px) {
     .logo_image {
         width: 10.375rem;
         margin-left: 8px !important;
@@ -15,8 +16,9 @@
         margin-left: 50px;
         margin-top: -10px;
     }
-    
+
 }
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -56,11 +58,11 @@
     padding: 7px 17px 7px 17px;
     border-radius: 5px;
     border: none;
-    margin-right: 10px;
+    margin-right: 40px;
     margin-top: 33px;
 }
 
-@media (max-width:450px){
+@media (max-width:450px) {
     .signup_btn {
         height: 35px;
         background-color: rgb(205, 17, 17);

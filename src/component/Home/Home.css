@@ -94,19 +94,21 @@ h6 {
     }
 }
 
-.text-input {
+.text-input1 {
     width: 55%;
     height: 50px;
     font-size: 16px;
     padding: 1px 10px;
+    border: none;
 }
 
-.submit_btn {
+.submit_btn1 {
     height: 57px;
     background-color: rgb(205, 17, 17);
     color: white;
     cursor: pointer;
     font-size: 18px;
+    border: none;
 
 }
 

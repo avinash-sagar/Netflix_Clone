@@ -1,17 +1,14 @@
 import React from 'react'
 import "./Navbar.css"
-// import {useNavigate} from "react-router-dom"
 export const Navbar = ({ newRef }) => {
-    // const [items, setItems] = useState(sessionStorage.getItem('email'))
-    // const navigate = useNavigate()
     const handleClick = () => {
         localStorage.clear()
-        // navigate('/')
         window.location.href = "/"
     }
+    const id = localStorage.getItem("id")
     const handleSignIn = () => {
-        // window.location.href = "/"
-        newRef.current.focus();
+        window.location.href = "/"
+        // newRef.current.focus();
     }
     return (
         <div className='navbar' >
@@ -21,9 +18,7 @@ export const Navbar = ({ newRef }) => {
                 alt="Netflix Logo"
             />
             <div>
-                {localStorage.getItem('email') ? <button className='signup_btn' onClick={handleClick} >Sign Out</button> : null}
-                {!localStorage.getItem('email') ? <button className='signup_btn' onClick={handleSignIn} >Sign In</button> : null}
-                {/* <button className='register-btn' >Register</button> */}
+                {!id && <button className='signup_btn' onClick={() => window.location.href = "/create-account"} >Sign Up</button>}
             </div>
 
 
