@@ -18,7 +18,7 @@ export const Banner = () => {
                 await instance({
                     url: `${requests.fetchNetflixOriginal}`
                 }).then((res) => {
-                    setMovies(res.data.results[Math.floor(Math.random() * res.data.results.length - 1)])
+                    setMovies(res.data.results[Math.floor(Math.random() * res.data.results.length - 1)]);
                 })
             }
             catch (e) {

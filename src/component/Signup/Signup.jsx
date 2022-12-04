@@ -29,26 +29,6 @@ export const Signup = () => {
             });
     }
     return (
-
-        // <div style={{
-        //     backgroundSize: "cover",
-        //     backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8) ),
-        //     url("https://images.unsplash.com/photo-1627873649417-c67f701f1949?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")`,
-        //     backgroundPosition: 'center center',
-        //     height: '100vh',
-        //     fontSize: '50px',
-        //     backgroundRepeat: 'no-repeat',
-        // }}  >
-        //     <div className='details_container' >
-        //         <h3>Sign Up</h3>
-        //         <div>
-        //             <input className={"text-input"} type="email" onChange={(e) => setEmail(e.target.value)} />
-        //             <input className={"text-input"} type="password" onChange={(e) => setPassword(e.target.value)} />
-        //             <button className='submit_btn' onClick={signUp} >Sign Up</button>
-
-        //         </div>
-        //     </div>
-        // </div>
         <div style={{
             backgroundSize: "cover",
             backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8) ),
@@ -67,12 +47,14 @@ export const Signup = () => {
                         className='text1'
                         type="email"
                         onChange={(e) => setEmail(e.target.value)}
+                        required
                     />
                     <input
                         placeholder='Password'
                         className='text1'
                         type="password"
                         onChange={(e) => setPassword(e.target.value)}
+                        required
                     />
                     <button className='submit_btn' onClick={signUp} >Register</button>
                     <button

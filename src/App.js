@@ -12,29 +12,19 @@ import {
 }
   from "react-router-dom";
 import { Signup } from './component/Signup/Signup';
+import { MovieDetals } from './component/MovieDetals';
 function App() {
-  const [myRef, setMyRef] = useState()
-  const MyRef = (data) => {
-    setMyRef(data)
-  }
+  const ID = localStorage.getItem('id');
   return (
     <div className="App">
-      <Navbar newRef={myRef} />
+      <Navbar />
       <Router>
         <Routes>
-          <Route path='/' element={<Home MyRef={MyRef} />} />
+          <Route path='/' element={<Home />} />
           <Route path='/create-account' element={<Signup />} />
-          <Route path='/movies' element={
-            <> <Banner />
-              <Row title={"Netflix Original"} isLarge fetchURL={requests.fetchNetflixOriginal} />
-              <Row title={"Trending Movies"} fetchURL={requests.fetchTrending} />
-              <Row title={"Top Rated Movies"} fetchURL={requests.fetchTopRated} />
-              <Row title={"Action Movies"} fetchURL={requests.fetchActionMovies} />
-              <Row title={"Comedy Movies"} fetchURL={requests.fetchComedyMovies} />
-              <Row title={"Horror Movies"} fetchURL={requests.fetchHorrorMovies} />
-              <Row title={"Romantic Movies"} fetchURL={requests.fetchRomanceMovies} />
-              <Row title={"Top Documentries"} fetchURL={requests.fetchDocumentries} />
-            </>}
+          <Route path='/movies'
+            element={ID ? <MovieDetals /> :
+              <h1 className='page_404' >Please login or register to enjoy movie content</h1>}
           />
         </Routes>
       </Router>
