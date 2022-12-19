@@ -17,8 +17,8 @@ function App() {
   const ID = localStorage.getItem('id');
   return (
     <div className="App">
-      <Navbar />
       <Router>
+        <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/create-account' element={<Signup />} />

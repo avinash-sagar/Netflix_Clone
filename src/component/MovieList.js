@@ -16,7 +16,7 @@ export const Row = ({ title, fetchURL, isLarge }) => {
                     url: `${fetchURL}`
                 })
                     .then((res) => {
-                        setMovies(res.data.results)
+                        setMovies(res.data.results);
                     })
             }
             catch (e) {
@@ -43,7 +43,7 @@ export const Row = ({ title, fetchURL, isLarge }) => {
                     const urlParams = new URLSearchParams(new URL(url).search)
                     setTrailerUrl(urlParams.get("v"))
                 })
-                .catch(err => console.log(err))
+                .catch(err => console.log(err));
         }
     }
     return (

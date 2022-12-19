@@ -1,18 +1,12 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import "./Home.css"
-import { Formik } from "formik";
-import { Signup } from '../Signup/Signup';
 import { useState } from 'react';
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import app from '../Signup/firebase';
-export const Home = ({ MyRef }) => {
-    const inputRef = useRef(null)
+export const Home = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState("")
-
-    // useEffect(() => {
-    //     MyRef(inputRef)
-    // }, [inputRef])
+    const backgroundUrl = "https://images.unsplash.com/photo-1627873649417-c67f701f1949?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
 
     const auth = getAuth(app);
     const signIn = () => {
@@ -25,15 +19,14 @@ export const Home = ({ MyRef }) => {
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                alert(errorCode.slice(5), " Check email or Password")
+                alert(errorCode.slice(5), " Check email or Password");
             });
-
     }
     return (
         <div style={{
             backgroundSize: "cover",
             backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5) ),
-            url("https://images.unsplash.com/photo-1627873649417-c67f701f1949?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")`,
+            url(${backgroundUrl})`,
             backgroundPosition: 'center center',
             height: '100vh',
             fontSize: '50px',
@@ -63,7 +56,6 @@ export const Home = ({ MyRef }) => {
                         onChange={(e) => setPassword(e.target.value)}
                         required
                     />
-
                     <button onClick={signIn} className='submit_btn1'>{"Get Started >"} </button>
                 </div>
             </div>

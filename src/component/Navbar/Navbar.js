@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Navbar.css"
+import { useLocation } from 'react-router-dom'
 export const Navbar = ({ newRef }) => {
+    const path = useLocation()
     const handleClick = () => {
         localStorage.clear()
         window.location.href = "/"
@@ -18,7 +20,10 @@ export const Navbar = ({ newRef }) => {
                 alt="Netflix Logo"
             />
             <div>
-                {!id && <button className='signup_btn' onClick={() => window.location.href = "/create-account"} >Sign Up</button>}
+                {!id &&
+                    (path.pathname !== "/create-account") &&
+                    <button className='signup_btn' onClick={() => window.location.href = "/create-account"} >Sign Up</button>
+                }
             </div>
 
 
