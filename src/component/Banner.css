@@ -81,3 +81,40 @@ h3 {
     position: relative;
     left: 90%;
 }
+
+@media (max-width: 450px ){
+    .signup_btn1 {
+        height: 35px;
+        background-color: rgb(205, 17, 17);
+        color: white;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: normal;
+        padding: 7px 17px 7px 17px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+        margin-top: 33px;
+        position: relative;
+        left: 72%;
+    }
+}
+@media (max-width: 850px ){
+    .signup_btn1 {
+        height: 35px;
+        background-color: rgb(205, 17, 17);
+        color: white;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: normal;
+        padding: 7px 17px 7px 17px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 10px;
+        margin-top: 33px;
+        position: relative;
+        left: 82%;
+    }
+}

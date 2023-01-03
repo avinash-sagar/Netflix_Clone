@@ -16,11 +16,12 @@ export const Row = ({ title, fetchURL, isLarge }) => {
                     url: `${fetchURL}`
                 })
                     .then((res) => {
+                        console.log("movie", res.data)
                         setMovies(res.data.results);
                     })
             }
-            catch (e) {
-                console.log(e)
+            catch (err) {
+                console.log(err)
             }
         }
         getMovieDetails()
@@ -66,7 +67,6 @@ export const Row = ({ title, fetchURL, isLarge }) => {
                 }
             </div>
             {trailerUrl ? <YouTube videoId={trailerUrl} opts={opts} /> : null}
-            ,
         </div>
     )
 };

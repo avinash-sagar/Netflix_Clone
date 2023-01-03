@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import YouTube from 'react-youtube'
-import instance from '../axios'
-import requests from '../requests'
-import "./Banner.css"
-import movieTrailer from 'movie-trailer'
-import { useLocation } from "react-router-dom"
+import React, { useEffect, useState } from 'react';
+import YouTube from 'react-youtube';
+import instance from '../axios';
+import requests from '../requests';
+import "./Banner.css";
+import movieTrailer from 'movie-trailer';
+import { useLocation } from "react-router-dom";
 import { getAuth, signOut } from "firebase/auth";
 import app from './Signup/firebase'
 export const Banner = () => {
     const [movies, setMovies] = useState([]);
-    const [movieUrl, setMovieUrl] = useState('')
-    let x = useLocation()
+    const [movieUrl, setMovieUrl] = useState('');
+    let x = useLocation();
     useEffect(() => {
-        console.log(localStorage.getItem("id"))
+        console.log(localStorage.getItem("id"));
         async function getBanner() {
             try {
                 await instance({
                     url: `${requests.fetchNetflixOriginal}`
                 }).then((res) => {
-                    setMovies(res.data.results[Math.floor(Math.random() * res.data.results.length - 1)]);
-                })
+                    setMovies(res.data.results[Math.floor(Math.random() * res.data.results.length - 1)]);                                                 
+                }) 
             }
             catch (e) {
                 console.log(e)
